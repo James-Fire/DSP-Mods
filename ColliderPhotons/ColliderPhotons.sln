@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColliderPhotons", "ColliderPhotons\ColliderPhotons.csproj", "{EE345284-CD8A-46A8-A561-7AE194A3CF34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE345284-CD8A-46A8-A561-7AE194A3CF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE345284-CD8A-46A8-A561-7AE194A3CF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE345284-CD8A-46A8-A561-7AE194A3CF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE345284-CD8A-46A8-A561-7AE194A3CF34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A2CBA46-49FB-4D7E-9EF3-135D2D526F58}
+	EndGlobalSection
+EndGlobal

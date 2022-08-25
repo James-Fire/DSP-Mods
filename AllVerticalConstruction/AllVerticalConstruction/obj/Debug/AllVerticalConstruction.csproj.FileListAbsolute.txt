@@ -1,0 +1,7 @@
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\bin\Debug\AllVerticalConstruction.dll
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\bin\Debug\AllVerticalConstruction.pdb
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\obj\Debug\AllVerticalConstruction.csproj.AssemblyReference.cache
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\obj\Debug\AllVerticalConstruction.csproj.CoreCompileInputs.cache
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\obj\Debug\AllVerticalConstruction.csproj.CopyComplete
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\obj\Debug\AllVerticalConstruction.dll
+C:\Users\godis\Documents\source\repos\AllVerticalConstruction\AllVerticalConstruction\obj\Debug\AllVerticalConstruction.pdb

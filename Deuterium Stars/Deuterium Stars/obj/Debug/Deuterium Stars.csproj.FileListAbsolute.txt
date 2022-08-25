@@ -1,0 +1,8 @@
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\obj\Debug\Deuterium Stars.csprojAssemblyReference.cache
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\obj\Debug\Deuterium Stars.csproj.CoreCompileInputs.cache
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\obj\Debug\Deuterium Stars.csproj.CopyComplete
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\bin\Debug\UnityEngine.AssetBundleModule.dll
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\bin\Debug\FusionStars.dll
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\bin\Debug\FusionStars.pdb
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\obj\Debug\FusionStars.dll
+C:\Users\godis\source\repos\Deuterium Stars\Deuterium Stars\obj\Debug\FusionStars.pdb

@@ -1,0 +1,10 @@
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\bin\Debug\ColliderPhotons.dll
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\bin\Debug\ColliderPhotons.pdb
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\bin\Debug\BepInEx.dll
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\bin\Debug\BepInEx.Harmony.dll
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\bin\Debug\LDBTool.dll
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\obj\Debug\ColliderPhotons.csprojAssemblyReference.cache
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\obj\Debug\ColliderPhotons.csproj.CoreCompileInputs.cache
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\obj\Debug\ColliderPhotons.csproj.CopyComplete
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\obj\Debug\ColliderPhotons.dll
+C:\Users\godis\source\repos\ColliderPhotons\ColliderPhotons\obj\Debug\ColliderPhotons.pdb

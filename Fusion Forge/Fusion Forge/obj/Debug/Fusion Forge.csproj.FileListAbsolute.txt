@@ -1,0 +1,14 @@
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\obj\Debug\Fusion Forge.csproj.CoreCompileInputs.cache
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\obj\Debug\Fusion Forge.csproj.CopyComplete
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\bin\Debug\FusionForge.dll
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\bin\Debug\FusionForge.pdb
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\obj\Debug\FusionForge.dll
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\obj\Debug\FusionForge.pdb
+C:\Users\godis\source\repos\Fusion Forge\Fusion Forge\obj\Debug\Fusion Forge.csprojAssemblyReference.cache
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\bin\Debug\FusionForge.dll
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\bin\Debug\FusionForge.pdb
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\obj\Debug\Fusion Forge.csproj.CoreCompileInputs.cache
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\obj\Debug\Fusion Forge.csproj.CopyComplete
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\obj\Debug\FusionForge.dll
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\obj\Debug\FusionForge.pdb
+C:\Users\godis\Documents\source\repos\Fusion Forge\Fusion Forge\obj\Debug\Fusion Forge.csproj.AssemblyReference.cache
