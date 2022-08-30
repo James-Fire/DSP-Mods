@@ -64,7 +64,7 @@ namespace ColliderPhotons
             newColphotons.Results = new int[] { 1208 }; //Critical Photon
             newColphotons.ItemCounts = new int[] { 2 };
             newColphotons.ResultCounts = new int[] { 1 };
-            newColphotons.TimeSpend = 1200;//Ticks. Divide by 60 for seconds.
+            newColphotons.TimeSpend = 1980;//Ticks. Divide by 60 for seconds.
             newColphotons.preTech = preTech;
             newColphotons.Explicit = true;
             newColphotons.GridIndex = 1708;
@@ -81,7 +81,7 @@ namespace ColliderPhotons
             Registry.registerString("colliderphotons", "Critical Photon");
             Registry.registerString("colliderphotonsdesc",
                 "Critical Photons can be made in our Particle Colliders, it just takes a while.");
-            Registry.registerRecipe(5000, ERecipeType.Assemble, 60, new[] { 1120 }, new[] { 2 }, new[] { 1208 }, new[] { 1 }, "colliderphotonsdesc", 1506);
+            Registry.registerRecipe(5000, ERecipeType.Assemble, 99, new[] { 1120 }, new[] { 2 }, new[] { 1208 }, new[] { 1 }, "colliderphotonsdesc", 1506);
         }
         //Registry.registerRecipe(RecipeID, RecipeType, Time, Ingredients(Table), Ingredient Amounts(Table), Results(Table), Result Amounts(Table), String Description, Tech ID);
         //Registry.registerItem(ItemID, ItemName, Desc, Icon, GridIndex);

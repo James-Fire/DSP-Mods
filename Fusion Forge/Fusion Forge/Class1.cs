@@ -140,46 +140,43 @@ namespace FusionForge
             int StoneDeut = (int)(Math.Ceiling(StoneMass / GrapheneMass * ((StoneWeight % GrapheneWeight) * HydrogenWeight)));
             int StoneTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((StoneMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double OrganicWeight = (int)(Math.Ceiling(((GraphiteMass * 4 + 5 + 16) / 10) * RareResWeightPenalty)); //Density of rare resources is determined by averaging the density of either the materials used to make it, or the materials it replaces in the shortcut recipe.
+            double OrganicWeight = (int)(Math.Ceiling(((GraphiteWeight * 5) + 3 + 1) * RareResWeightPenalty)); //Density of rare resources is determined by averaging the density of either the materials used to make it, or the materials it replaces in the shortcut recipe.
             double OrganicMass = (int)(Math.Ceiling(16 * RareResWeightPenalty)); // Rare Resource mass (Which is used in the previously-mentioned exponential equation to get recipe time) is determined by the highest of all the items it is replacing, then given the Weight Penalty.
-            int OrganicGraphene = (int)(Math.Ceiling((OrganicMass / GrapheneMass) * (OrganicWeight / GrapheneWeight) * RareResWeightPenalty));
-            int OrganicDeut = (int)(Math.Ceiling((OrganicMass / GrapheneMass) * (OrganicWeight % GrapheneWeight) * HydrogenWeight * RareResWeightPenalty));
+            int OrganicGraphene = (int)(Math.Ceiling((OrganicMass / GrapheneMass) * (OrganicWeight / GrapheneWeight)));
+            int OrganicDeut = (int)(Math.Ceiling((OrganicMass / GrapheneMass) * (OrganicWeight % GrapheneWeight) * HydrogenWeight));
             int OrganicTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((OrganicMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double OpticalWeight = (int)(Math.Ceiling((OrganicWeight + 3 * TitaniumWeight) / 4));
+            double OpticalWeight = (int)(Math.Ceiling((OrganicWeight + 3 * TitaniumWeight) / 8));
             double OpticalMass = (int)(Math.Ceiling((Math.Max(OrganicMass, TitaniumMass)) * RareResWeightPenalty));
-            int OpticalGraphene = (int)(Math.Ceiling((OpticalMass / GrapheneMass) * (OpticalWeight / GrapheneWeight) * RareResWeightPenalty));
-            int OpticalDeut = (int)(Math.Ceiling((OpticalMass / GrapheneMass) * (OpticalWeight % GrapheneWeight) * HydrogenWeight * RareResWeightPenalty));
+            int OpticalGraphene = (int)(Math.Ceiling((OpticalMass / GrapheneMass) * (OpticalWeight / GrapheneWeight)));
+            int OpticalDeut = (int)(Math.Ceiling((OpticalMass / GrapheneMass) * (OpticalWeight % GrapheneWeight) * HydrogenWeight));
             int OpticalTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((OpticalMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
             double FireWeight = (int)(Math.Ceiling((GrapheneWeight * 2 + 1) / 2) * RareResWeightPenalty);
             double FireMass = (int)(Math.Ceiling(((GrapheneMass * 2 + 1) * RareResWeightPenalty) / 2));
-            int FireGraphene = (int)(Math.Ceiling((FireMass / GrapheneMass) * (FireWeight / GrapheneWeight) * RareResWeightPenalty));
-            int FireDeut = (int)(Math.Ceiling(FireMass * (FireWeight / HydrogenWeight) * RareResWeightPenalty));
-            int FireTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((FireMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
+            int FireDeut = (int)(Math.Ceiling(FireMass * (FireWeight / HydrogenWeight)));
+            int FireTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((FireMass - 1) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double SpinoWeight = (int)(Math.Ceiling(((TitaniumWeight / 2 + GrapheneWeight * 1.5) / 2) * RareResWeightPenalty));
+            double SpinoWeight = (int)(Math.Ceiling((((TitaniumWeight / 2 + GrapheneWeight * 1.5) / 2)/3) * RareResWeightPenalty));
             double SpinoMass = (int)(Math.Ceiling(TitaniumMass * RareResWeightPenalty));
-            int SpinoGraphene = (int)(Math.Ceiling((SpinoMass / GrapheneMass) * (SpinoWeight / GrapheneWeight) * RareResWeightPenalty));
-            int SpinoDeut = (int)(Math.Ceiling((SpinoMass / GrapheneMass) * (SpinoWeight % GrapheneWeight) * HydrogenWeight * RareResWeightPenalty));
-            int SpinoTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((SpinoMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
+            int SpinoDeut = (int)(Math.Ceiling(SpinoMass * (SpinoWeight / GrapheneWeight) * HydrogenWeight));
+            int SpinoTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((SpinoMass - 1) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
             double FractalWeight = (int)(Math.Ceiling((SiliconWeight / 2) * RareResWeightPenalty));
             double FractalMass = (int)(Math.Ceiling(SiliconMass * RareResWeightPenalty));
-            int FractalGraphene = (int)(Math.Ceiling((FractalMass / GrapheneMass) * (FractalWeight / GrapheneWeight) * RareResWeightPenalty));
-            int FractalDeut = (int)(Math.Ceiling((FractalMass / GrapheneMass) * (FractalWeight % GrapheneWeight) * HydrogenWeight * RareResWeightPenalty));
+            int FractalGraphene = (int)(Math.Ceiling((FractalMass / GrapheneMass) * (FractalWeight / GrapheneWeight)));
+            int FractalDeut = (int)(Math.Ceiling((FractalMass / GrapheneMass) * (FractalWeight % GrapheneWeight) * HydrogenWeight));
             int FractalTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((FractalMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double KimberWeight = (int)(Math.Ceiling(GraphiteMass / 2) * RareResWeightPenalty);
+            double KimberWeight = (int)(Math.Ceiling(2 * GraphiteWeight) * RareResWeightPenalty);
             double KimberMass = (int)(Math.Ceiling(GraphiteMass * RareResWeightPenalty));
-            int KimberGraphene = (int)(Math.Ceiling((KimberMass / GrapheneMass) * (KimberWeight / GrapheneWeight) * RareResWeightPenalty));
-            int KimberDeut = (int)(Math.Ceiling(KimberMass * (KimberWeight / HydrogenWeight) * RareResWeightPenalty));
-            int KimberTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((KimberMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
+            int KimberDeut = (int)(Math.Ceiling(KimberMass * (KimberWeight / HydrogenWeight)));
+            int KimberTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((KimberMass - 1) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
             double UnipolarWeight = (int)(Math.Ceiling((((GrapheneWeight * 2 + (12 * IronWeight + 3 * CopperWeight)) / 10) / 17) * RareResWeightPenalty));
             double UnipolarMass = (int)(Math.Ceiling(CopperMass * RareResWeightPenalty));
-            int UnipolarGraphene = (int)(Math.Ceiling((UnipolarMass / GrapheneMass) * (UnipolarWeight / GrapheneWeight) * RareResWeightPenalty));
-            int UnipolarDeut = (int)(Math.Ceiling(UnipolarMass * (UnipolarWeight / HydrogenWeight) * RareResWeightPenalty));
+            int UnipolarGraphene = (int)(Math.Ceiling((UnipolarMass / GrapheneMass) * (UnipolarWeight / GrapheneWeight)));
+            int UnipolarDeut = (int)(Math.Ceiling(UnipolarMass * (UnipolarWeight % HydrogenWeight)));
             int UnipolarTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((UnipolarMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
             var IronIcon = LDB.items.Select(1101);//Iron ingot item
@@ -210,10 +207,10 @@ namespace FusionForge
 
             ProtoRegistry.RegisterRecipe(5010, ERecipeType.Particle, OrganicTime, new[] { 1121, 1123 }, new[] { OrganicDeut, OrganicGraphene }, new[] { 1117 }, new[] { 1 } , "OrganicFusionDesc", FusionTech, 1613, "OrganicFusion", OrganicIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5011, ERecipeType.Particle, OpticalTime, new[] { 1121, 1123 }, new[] { OpticalDeut, OpticalGraphene }, new[] { 1014 }, new[] { 1 } , "OpticalFusionDesc", FusionTech, 1614, "OpticalFusion", OpticalIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5012, ERecipeType.Particle, FireTime, new[] { 1121, 1123 }, new[] { FireDeut, FireGraphene }, new[] { 1011 }, new[] { 1 } , "FireFusionDesc", FusionTech, 1615, "FireFusion", FireIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5013, ERecipeType.Particle, SpinoTime, new[] { 1121, 1123 }, new[] { SpinoDeut, SpinoGraphene }, new[] { 1015 }, new[] { 1 } , "SpinoFusionDesc", FusionTech, 1616, "SpinoFusion", SpinoIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5012, ERecipeType.Particle, FireTime, new[] { 1121 }, new[] { FireDeut }, new[] { 1011 }, new[] { 1 } , "FireFusionDesc", FusionTech, 1615, "FireFusion", FireIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5013, ERecipeType.Particle, SpinoTime, new[] { 1121 }, new[] { SpinoDeut }, new[] { 1015 }, new[] { 1 } , "SpinoFusionDesc", FusionTech, 1616, "SpinoFusion", SpinoIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5014, ERecipeType.Particle, FractalTime, new[] { 1121, 1123 }, new[] { FractalDeut, FractalGraphene }, new[] { 1013 }, new[] { 1 } , "FractalFusionDesc", FusionTech, 1713, "FractalFusion", FractalIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5015, ERecipeType.Particle, KimberTime, new[] { 1121, 1123 }, new[] { KimberDeut, KimberGraphene }, new[] { 1012 }, new[] { 1 } , "KimberFusionDesc", FusionTech, 1714, "KimberFusion", KimberIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5015, ERecipeType.Particle, KimberTime, new[] { 1121, }, new[] { KimberDeut }, new[] { 1012 }, new[] { 1 } , "KimberFusionDesc", FusionTech, 1714, "KimberFusion", KimberIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5016, ERecipeType.Particle, UnipolarTime, new[] { 1121, 1123 }, new[] { UnipolarDeut, UnipolarGraphene }, new[] { 1016 }, new[] { 1 } , "UnipolarFusionDesc", FusionTech, 1715, "UnipolarFusion", UnipolarIcon.IconPath);
 
 
