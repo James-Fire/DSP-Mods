@@ -20,7 +20,6 @@ namespace FusionForge
         {
             Logger.LogInfo("FusionForge initializing 1.1");
             //resources.LoadAssetBundle("FusionForge");
-
             #region Strings
             //Tech Strings
             ProtoRegistry.RegisterString("FusionTech", "Advanced Fusion");
@@ -197,21 +196,21 @@ namespace FusionForge
 
             //RecipeProto RegisterRecipe(int id, int type, int time, int[] input, int[] inCounts, int[] output, int[] outCounts, string description, int techID, int gridIndex, string name, string iconPath)
 
-            ProtoRegistry.RegisterRecipe(5003, ERecipeType.Particle, IronTime, new[] { 1121, 1123 }, new[] { IronDeut, IronGraphene }, new[] {1101}, new[] { 1 } , "IronFusionDesc", FusionTech, 1413, "IronFusion", IronIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5004, ERecipeType.Particle, CopperTime, new[] { 1121, 1123 }, new[] { CopperDeut, CopperGraphene }, new[] { 1104 }, new[] { 1 } , "CopperFusionDesc", FusionTech, 1414, "CopperFusion", CopperIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5005, ERecipeType.Particle, GraphiteTime, new[] { 1121 }, new[] { GraphiteDeut }, new[] { 1006 }, new[] { 1 } , "GraphiteFusionDesc", FusionTech, 1415, "GraphiteFusion", GraphiteIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5006, ERecipeType.Particle, IronTime, new[] { 1121, 1123 }, new[] { IronDeut, IronGraphene }, new[] { 1102 }, new[] { 1 } , "MagnetFusionDesc", FusionTech, 1416, "MagnetFusion", MagnetIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5007, ERecipeType.Particle, SiliconTime, new[] { 1121, 1123 }, new[] { SiliconDeut, SiliconGraphene }, new[] { 1105 }, new[] { 1 } , "SiliconFusionDesc", FusionTech, 1513, "SiliconFusion", SiliconIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5008, ERecipeType.Particle, TitaniumTime, new[] { 1121, 1123 }, new[] { TitaniumDeut, TitaniumGraphene }, new[] { 1106 }, new[] { 1 } , "TitaniumFusionDesc", FusionTech, 1514, "TitaniumFusion", TitaniumIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5009, ERecipeType.Particle, StoneTime, new[] { 1121, 1123 }, new[] { StoneDeut, StoneGraphene }, new[] { 1005 }, new[] { 1 } , "StoneFusionDesc", FusionTech, 1515, "StoneFusion", StoneIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5003, ERecipeType.Particle, IronTime, new[] { 1121, 1123 }, new[] { IronDeut, IronGraphene }, new[] {1101}, new[] { 1 } , "IronFusionDesc", FusionTech, 2801, "IronFusion", IronIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5004, ERecipeType.Particle, CopperTime, new[] { 1121, 1123 }, new[] { CopperDeut, CopperGraphene }, new[] { 1104 }, new[] { 1 } , "CopperFusionDesc", FusionTech, 2802, "CopperFusion", CopperIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5005, ERecipeType.Particle, GraphiteTime, new[] { 1121 }, new[] { GraphiteDeut }, new[] { 1006 }, new[] { 1 } , "GraphiteFusionDesc", FusionTech, 2803, "GraphiteFusion", GraphiteIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5006, ERecipeType.Particle, IronTime, new[] { 1121, 1123 }, new[] { IronDeut, IronGraphene }, new[] { 1102 }, new[] { 1 } , "MagnetFusionDesc", FusionTech, 2804, "MagnetFusion", MagnetIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5007, ERecipeType.Particle, SiliconTime, new[] { 1121, 1123 }, new[] { SiliconDeut, SiliconGraphene }, new[] { 1105 }, new[] { 1 } , "SiliconFusionDesc", FusionTech, 2805, "SiliconFusion", SiliconIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5008, ERecipeType.Particle, TitaniumTime, new[] { 1121, 1123 }, new[] { TitaniumDeut, TitaniumGraphene }, new[] { 1106 }, new[] { 1 } , "TitaniumFusionDesc", FusionTech, 2806, "TitaniumFusion", TitaniumIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5009, ERecipeType.Particle, StoneTime, new[] { 1121, 1123 }, new[] { StoneDeut, StoneGraphene }, new[] { 1005 }, new[] { 1 } , "StoneFusionDesc", FusionTech, 2807, "StoneFusion", StoneIcon.IconPath);
 
-            ProtoRegistry.RegisterRecipe(5010, ERecipeType.Particle, OrganicTime, new[] { 1121, 1123 }, new[] { OrganicDeut, OrganicGraphene }, new[] { 1117 }, new[] { 1 } , "OrganicFusionDesc", FusionTech, 1613, "OrganicFusion", OrganicIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5011, ERecipeType.Particle, OpticalTime, new[] { 1121, 1123 }, new[] { OpticalDeut, OpticalGraphene }, new[] { 1014 }, new[] { 1 } , "OpticalFusionDesc", FusionTech, 1614, "OpticalFusion", OpticalIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5012, ERecipeType.Particle, FireTime, new[] { 1121 }, new[] { FireDeut }, new[] { 1011 }, new[] { 1 } , "FireFusionDesc", FusionTech, 1615, "FireFusion", FireIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5013, ERecipeType.Particle, SpinoTime, new[] { 1121 }, new[] { SpinoDeut }, new[] { 1015 }, new[] { 1 } , "SpinoFusionDesc", FusionTech, 1616, "SpinoFusion", SpinoIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5014, ERecipeType.Particle, FractalTime, new[] { 1121, 1123 }, new[] { FractalDeut, FractalGraphene }, new[] { 1013 }, new[] { 1 } , "FractalFusionDesc", FusionTech, 1713, "FractalFusion", FractalIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5015, ERecipeType.Particle, KimberTime, new[] { 1121, }, new[] { KimberDeut }, new[] { 1012 }, new[] { 1 } , "KimberFusionDesc", FusionTech, 1714, "KimberFusion", KimberIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5016, ERecipeType.Particle, UnipolarTime, new[] { 1121, 1123 }, new[] { UnipolarDeut, UnipolarGraphene }, new[] { 1016 }, new[] { 1 } , "UnipolarFusionDesc", FusionTech, 1715, "UnipolarFusion", UnipolarIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5010, ERecipeType.Particle, OrganicTime, new[] { 1121, 1123 }, new[] { OrganicDeut, OrganicGraphene }, new[] { 1117 }, new[] { 1 } , "OrganicFusionDesc", FusionTech, 2808, "OrganicFusion", OrganicIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5011, ERecipeType.Particle, OpticalTime, new[] { 1121, 1123 }, new[] { OpticalDeut, OpticalGraphene }, new[] { 1014 }, new[] { 1 } , "OpticalFusionDesc", FusionTech, 2809, "OpticalFusion", OpticalIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5012, ERecipeType.Particle, FireTime, new[] { 1121 }, new[] { FireDeut }, new[] { 1011 }, new[] { 1 } , "FireFusionDesc", FusionTech, 2810, "FireFusion", FireIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5013, ERecipeType.Particle, SpinoTime, new[] { 1121 }, new[] { SpinoDeut }, new[] { 1015 }, new[] { 1 } , "SpinoFusionDesc", FusionTech, 2811, "SpinoFusion", SpinoIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5014, ERecipeType.Particle, FractalTime, new[] { 1121, 1123 }, new[] { FractalDeut, FractalGraphene }, new[] { 1013 }, new[] { 1 } , "FractalFusionDesc", FusionTech, 2812, "FractalFusion", FractalIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5015, ERecipeType.Particle, KimberTime, new[] { 1121, }, new[] { KimberDeut }, new[] { 1012 }, new[] { 1 } , "KimberFusionDesc", FusionTech, 2813, "KimberFusion", KimberIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5016, ERecipeType.Particle, UnipolarTime, new[] { 1121, 1123 }, new[] { UnipolarDeut, UnipolarGraphene }, new[] { 1016 }, new[] { 1 } , "UnipolarFusionDesc", FusionTech, 2814, "UnipolarFusion", UnipolarIcon.IconPath);
 
 
 
