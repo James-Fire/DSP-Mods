@@ -42,7 +42,6 @@ namespace FusionStars
 			if (p is ItemProto && (p.ID == 2210))
             {
 				ItemProto itemProto = LDB.items.Select(2210);
-				PrefabDesc prefabDesc = itemProto.prefabDesc;
 				itemProto.prefabDesc.fuelMask = 6;
 				itemProto.prefabDesc.useFuelPerTick = 250000L;
 				ItemProto.fuelNeeds[6] = new int[] { 1802, 1803 };
