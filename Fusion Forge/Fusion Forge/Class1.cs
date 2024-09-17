@@ -213,6 +213,18 @@ namespace FusionForge
             ProtoRegistry.RegisterRecipe(5016, ERecipeType.Particle, UnipolarTime, new[] { 1121, 1123 }, new[] { UnipolarDeut, UnipolarGraphene }, new[] { 1016 }, new[] { 1 } , "UnipolarFusionDesc", FusionTech, 2814, "UnipolarFusion", UnipolarIcon.IconPath);
 
 
+            
+            
+            
+            #endregion
+        }
+        void OnPostAdd()
+        {
+            var IronIcon = LDB.items.Select(1101);//Iron ingot item
+            var CopperIcon = LDB.items.Select(1104);//Copper ingot item
+            var MagnetIcon = LDB.items.Select(1102);//Magnet item
+            var SiliconIcon = LDB.items.Select(1105);//Silicon ingot item
+            var TitaniumIcon = LDB.items.Select(1106);//Titanium ingot item
 
             //Add these recipes to the item, so it shows on them.
             RecipeProto FusionIronR = LDB.recipes.Select(5003);
@@ -221,13 +233,12 @@ namespace FusionForge
             RecipeProto FusionSiliconR = LDB.recipes.Select(5007);
             RecipeProto FusionTitaniumR = LDB.recipes.Select(5008);
 
+
             IronIcon.recipes.Add(FusionIronR);
             CopperIcon.recipes.Add(FusionCopperR);
-            //GraphiteIcon.recipes.Add(FusionGraphiteR); Since this was changed to coal, it doesn't go on graphite anymore.
             MagnetIcon.recipes.Add(FusionMagnetR);
             SiliconIcon.recipes.Add(FusionSiliconR);
             TitaniumIcon.recipes.Add(FusionTitaniumR);
-        #endregion
         }
     }
 }
