@@ -116,10 +116,10 @@ namespace FusionForge
             int CopperDeut = (int)(Math.Ceiling(CopperMass / GrapheneMass * ((CopperWeight % GrapheneWeight) * HydrogenWeight)));
             int CopperTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((CopperMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double GraphiteWeight = 1;
-            double GraphiteMass = 15;
-            int GraphiteDeut = (int)(Math.Ceiling(GraphiteMass / 2 * ((GraphiteWeight / HydrogenWeight) * HydrogenWeight)));
-            int GraphiteTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((GraphiteMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
+            double CoalWeight = 1;
+            double CoalMass = 15;
+            int CoalDeut = (int)(Math.Ceiling(CoalMass / 2 * ((CoalWeight / HydrogenWeight) * HydrogenWeight)));
+            int CoalTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((CoalMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
             double SiliconWeight = 2.33;
             double SiliconMass = 28;
@@ -139,7 +139,7 @@ namespace FusionForge
             int StoneDeut = (int)(Math.Ceiling(StoneMass / GrapheneMass * ((StoneWeight % GrapheneWeight) * HydrogenWeight)));
             int StoneTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((StoneMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double OrganicWeight = (int)(Math.Ceiling(((GraphiteWeight * 5) + 3 + 1) * RareResWeightPenalty)); //Density of rare resources is determined by averaging the density of either the materials used to make it, or the materials it replaces in the shortcut recipe.
+            double OrganicWeight = (int)(Math.Ceiling(((CoalWeight * 5) + 3 + 1) * RareResWeightPenalty)); //Density of rare resources is determined by averaging the density of either the materials used to make it, or the materials it replaces in the shortcut recipe.
             double OrganicMass = (int)(Math.Ceiling(16 * RareResWeightPenalty)); // Rare Resource mass (Which is used in the previously-mentioned exponential equation to get recipe time) is determined by the highest of all the items it is replacing, then given the Weight Penalty.
             int OrganicGraphene = (int)(Math.Ceiling((OrganicMass / GrapheneMass) * (OrganicWeight / GrapheneWeight)));
             int OrganicDeut = (int)(Math.Ceiling((OrganicMass / GrapheneMass) * (OrganicWeight % GrapheneWeight) * HydrogenWeight));
@@ -167,8 +167,8 @@ namespace FusionForge
             int FractalDeut = (int)(Math.Ceiling((FractalMass / GrapheneMass) * (FractalWeight % GrapheneWeight) * HydrogenWeight));
             int FractalTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((FractalMass - GrapheneMass) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
-            double KimberWeight = (int)(Math.Ceiling(2 * GraphiteWeight) * RareResWeightPenalty);
-            double KimberMass = (int)(Math.Ceiling(GraphiteMass * RareResWeightPenalty));
+            double KimberWeight = (int)(Math.Ceiling(2 * CoalWeight) * RareResWeightPenalty);
+            double KimberMass = (int)(Math.Ceiling(CoalMass * RareResWeightPenalty));
             int KimberDeut = (int)(Math.Ceiling(KimberMass * (KimberWeight / HydrogenWeight)));
             int KimberTime = (int)(Math.Round(BaseTime * Math.Pow(PowerExponent, ((KimberMass - 1) / PowerDivisor)), SigDigs, MidpointRounding.AwayFromZero));//Ticks. Divide by 60 for seconds.
 
@@ -180,7 +180,7 @@ namespace FusionForge
 
             var IronIcon = LDB.items.Select(1101);//Iron ingot item
             var CopperIcon = LDB.items.Select(1104);//Copper ingot item
-            var GraphiteIcon = LDB.items.Select(1006);//Coal item; Changing it to coal from graphite because Proliferator Mk1 requires coal
+            var CoalIcon = LDB.items.Select(1006);//Coal item; Changing it to coal from Coal because Proliferator Mk1 requires coal
             var MagnetIcon = LDB.items.Select(1102);//Magnet item
             var SiliconIcon = LDB.items.Select(1105);//Silicon ingot item
             var TitaniumIcon = LDB.items.Select(1106);//Titanium ingot item
@@ -198,7 +198,7 @@ namespace FusionForge
 
             ProtoRegistry.RegisterRecipe(5003, ERecipeType.Particle, IronTime, new[] { 1121, 1123 }, new[] { IronDeut, IronGraphene }, new[] {1101}, new[] { 1 } , "IronFusionDesc", FusionTech, 2801, "IronFusion", IronIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5004, ERecipeType.Particle, CopperTime, new[] { 1121, 1123 }, new[] { CopperDeut, CopperGraphene }, new[] { 1104 }, new[] { 1 } , "CopperFusionDesc", FusionTech, 2802, "CopperFusion", CopperIcon.IconPath);
-            ProtoRegistry.RegisterRecipe(5005, ERecipeType.Particle, GraphiteTime, new[] { 1121 }, new[] { GraphiteDeut }, new[] { 1006 }, new[] { 1 } , "GraphiteFusionDesc", FusionTech, 2803, "GraphiteFusion", GraphiteIcon.IconPath);
+            ProtoRegistry.RegisterRecipe(5005, ERecipeType.Particle, CoalTime, new[] { 1121 }, new[] { CoalDeut }, new[] { 1006 }, new[] { 1 } , "CoalFusionDesc", FusionTech, 2803, "CoalFusion", CoalIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5006, ERecipeType.Particle, IronTime, new[] { 1121, 1123 }, new[] { IronDeut, IronGraphene }, new[] { 1102 }, new[] { 1 } , "MagnetFusionDesc", FusionTech, 2804, "MagnetFusion", MagnetIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5007, ERecipeType.Particle, SiliconTime, new[] { 1121, 1123 }, new[] { SiliconDeut, SiliconGraphene }, new[] { 1105 }, new[] { 1 } , "SiliconFusionDesc", FusionTech, 2805, "SiliconFusion", SiliconIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5008, ERecipeType.Particle, TitaniumTime, new[] { 1121, 1123 }, new[] { TitaniumDeut, TitaniumGraphene }, new[] { 1106 }, new[] { 1 } , "TitaniumFusionDesc", FusionTech, 2806, "TitaniumFusion", TitaniumIcon.IconPath);
@@ -211,34 +211,57 @@ namespace FusionForge
             ProtoRegistry.RegisterRecipe(5014, ERecipeType.Particle, FractalTime, new[] { 1121, 1123 }, new[] { FractalDeut, FractalGraphene }, new[] { 1013 }, new[] { 1 } , "FractalFusionDesc", FusionTech, 2812, "FractalFusion", FractalIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5015, ERecipeType.Particle, KimberTime, new[] { 1121, }, new[] { KimberDeut }, new[] { 1012 }, new[] { 1 } , "KimberFusionDesc", FusionTech, 2813, "KimberFusion", KimberIcon.IconPath);
             ProtoRegistry.RegisterRecipe(5016, ERecipeType.Particle, UnipolarTime, new[] { 1121, 1123 }, new[] { UnipolarDeut, UnipolarGraphene }, new[] { 1016 }, new[] { 1 } , "UnipolarFusionDesc", FusionTech, 2814, "UnipolarFusion", UnipolarIcon.IconPath);
-
-
-            
-            
-            
             #endregion
+            LDBTool.PostAddDataAction += OnPostAdd;
         }
         void OnPostAdd()
         {
             var IronIcon = LDB.items.Select(1101);//Iron ingot item
             var CopperIcon = LDB.items.Select(1104);//Copper ingot item
+            var CoalIcon = LDB.items.Select(1006);//Coal item; Changing it to coal from Coal because Proliferator Mk1 requires coal
             var MagnetIcon = LDB.items.Select(1102);//Magnet item
             var SiliconIcon = LDB.items.Select(1105);//Silicon ingot item
             var TitaniumIcon = LDB.items.Select(1106);//Titanium ingot item
+            var StoneIcon = LDB.items.Select(1005); ;//Stone
+
+            var OrganicIcon = LDB.items.Select(1117);//Organic Crystal item
+            var OpticalIcon = LDB.items.Select(1014);//Optical Grating Crystal item
+            var FireIcon = LDB.items.Select(1011);//Fire Ice item
+            var SpinoIcon = LDB.items.Select(1015);//Spinoform Stalagmite Crystal item
+            var FractalIcon = LDB.items.Select(1013);//Fractal Silicon item
+            var KimberIcon = LDB.items.Select(1012);//Kimberlite Ore item
+            var UnipolarIcon = LDB.items.Select(1016); ;//Unipolar Magnet item
 
             //Add these recipes to the item, so it shows on them.
             RecipeProto FusionIronR = LDB.recipes.Select(5003);
             RecipeProto FusionCopperR = LDB.recipes.Select(5004);
-            RecipeProto FusionMagnetR = LDB.recipes.Select(5006);
+            RecipeProto FusionMagnetR = LDB.recipes.Select(5005);
+            RecipeProto FusionCoalR = LDB.recipes.Select(5006);
             RecipeProto FusionSiliconR = LDB.recipes.Select(5007);
             RecipeProto FusionTitaniumR = LDB.recipes.Select(5008);
-
+            RecipeProto FusionStoneR = LDB.recipes.Select(5009);
+            RecipeProto FusionOrganicR = LDB.recipes.Select(5010);
+            RecipeProto FusionOpticalR = LDB.recipes.Select(5011);
+            RecipeProto FusionFireR = LDB.recipes.Select(5012);
+            RecipeProto FusionSpinoR = LDB.recipes.Select(5013);
+            RecipeProto FusionFractalR = LDB.recipes.Select(5014);
+            RecipeProto FusionKimberR = LDB.recipes.Select(5015);
+            RecipeProto FusionUnipolarR = LDB.recipes.Select(5016);
 
             IronIcon.recipes.Add(FusionIronR);
             CopperIcon.recipes.Add(FusionCopperR);
+            CoalIcon.recipes.Add(FusionCoalR);
             MagnetIcon.recipes.Add(FusionMagnetR);
             SiliconIcon.recipes.Add(FusionSiliconR);
             TitaniumIcon.recipes.Add(FusionTitaniumR);
+            StoneIcon.recipes.Add(FusionStoneR);
+            OrganicIcon.recipes.Add(FusionOrganicR);
+            OpticalIcon.recipes.Add(FusionOpticalR);
+            FireIcon.recipes.Add(FusionFireR);
+            SpinoIcon.recipes.Add(FusionSpinoR);
+            FractalIcon.recipes.Add(FusionFractalR);
+            KimberIcon.recipes.Add(FusionKimberR);
+            UnipolarIcon.recipes.Add(FusionUnipolarR);
         }
     }
 }
